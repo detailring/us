@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="theme-color" content="#0A0A0B" />
+<title>DETAILING — Premium Auto Detailing in Los Angeles</title>
+<meta name="description" content="DETAILING — premium auto detailing studio in Los Angeles. Paint correction, ceramic coating, vinyl wraps & PPF, and interior detailing. Showroom shine, guaranteed." />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700;12..96,800&family=Manrope:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+
+<link rel="stylesheet" href="css/styles.css?v=23" />
+<link rel="preload" as="image" href="assets/img/hero-car.jpg" fetchpriority="high" />
+</head>
+<body>
+
+<!-- ============ PRELOADER ============ -->
+<div class="preloader" id="preloader" aria-hidden="true">
+  <div class="preloader__inner">
+    <div class="preloader__mark">
+      <span class="preloader__diamond"></span>
+      <span class="preloader__word">DETAILING</span>
+    </div>
+    <div class="preloader__bar"><i></i></div>
+  </div>
+</div>
+
+<!-- ============ CUSTOM CURSOR ============ -->
+<div class="cursor" id="cursor" aria-hidden="true">
+  <div class="cursor__ring" id="cursorRing"><span class="cursor__label" id="cursorLabel"></span></div>
+  <div class="cursor__dot" id="cursorDot"></div>
+</div>
+
+<!-- ============ SCROLL PROGRESS ============ -->
+<div class="scroll-progress"><i id="scrollBar"></i></div>
+
+<!-- ============ GRAIN / VIGNETTE OVERLAYS ============ -->
+<div class="fx-grain" aria-hidden="true"></div>
+
+<!-- ============ HEADER ============ -->
+<header class="nav" id="nav">
+  <div class="nav__inner">
+    <a href="#hero" class="brand" data-cursor="Top" aria-label="DETAILING — home">
+      <span class="brand__diamond"></span>
+      <span class="brand__name">DETAI<span>LING</span></span>
+    </a>
+
+    <nav class="nav__menu" aria-label="Main navigation">
+      <a href="#services" class="nav__link">Services</a>
+      <a href="#calculator" class="nav__link">Pricing</a>
+      <a href="#works" class="nav__link">Our Work</a>
+      <a href="#wrap" class="nav__link">Color Lab</a>
+      <a href="#reviews" class="nav__link">Reviews</a>
+      <a href="#faq" class="nav__link">FAQ</a>
+      <a href="#contacts" class="nav__link">Contact</a>
+    </nav>
+
+    <div class="nav__actions">
+      <a href="tel:+13104240142" class="nav__phone" data-cursor="Call">(310) 424-0142</a>
+      <a href="#contacts" class="btn btn--gold btn--sm magnetic" data-cursor="Book"><span>Book Now</span></a>
+      <button class="burger" id="burger" aria-label="Menu" aria-expanded="false">
+        <span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- ============ MOBILE MENU ============ -->
+<div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+  <nav class="mobile-menu__nav">
+    <a href="#services" class="mobile-menu__link"><span class="mm-num">01</span>Services</a>
+    <a href="#calculator" class="mobile-menu__link"><span class="mm-num">02</span>Pricing</a>
+    <a href="#works" class="mobile-menu__link"><span class="mm-num">03</span>Our Work</a>
+    <a href="#wrap" class="mobile-menu__link"><span class="mm-num">04</span>Color Lab</a>
+    <a href="#reviews" class="mobile-menu__link"><span class="mm-num">05</span>Reviews</a>
+    <a href="#faq" class="mobile-menu__link"><span class="mm-num">06</span>FAQ</a>
+    <a href="#contacts" class="mobile-menu__link"><span class="mm-num">07</span>Contact</a>
+  </nav>
+  <div class="mobile-menu__footer">
+    <a href="tel:+13104240142" class="mobile-menu__phone">(310) 424-0142</a>
+    <p>Los Angeles · 8420 Melrose Ave</p>
+  </div>
+</div>
+
+<main>
+
+<!-- ============ HERO ============ -->
+<section class="hero" id="hero">
+  <div class="hero__media">
+    <video class="hero__video" autoplay muted loop playsinline preload="auto" poster="assets/img/hero-car.jpg" aria-label="Premium auto detailing">
+      <source src="assets/video/hero.mp4" type="video/mp4" />
+    </video>
+    <div class="hero__scrim"></div>
+    <div class="hero__vignette"></div>
+  </div>
+
+  <div class="hero__loc" data-reveal>
+    <span class="hero__loc-dot"></span>
+    <span class="hero__loc-city">Los Angeles · 8420 Melrose Ave</span>
+  </div>
+
+  <div class="hero__content">
+    <p class="hero__eyebrow" data-reveal>Premium Auto Detailing Studio</p>
+    <h1 class="hero__title">
+      <span class="line" data-reveal data-d="1">Perfection</span>
+      <span class="line line--accent" data-reveal data-d="2">in the details.</span>
+    </h1>
+    <p class="hero__sub" data-reveal data-d="3">
+      Paint correction to a mirror finish, ceramic coating, vinyl wraps &amp; PPF, and interior detailing.
+    </p>
+    <p class="hero__guarantee" data-reveal data-d="4">
+      We bring back that factory-fresh shine — and make it last longer than the&nbsp;warranty&nbsp;promises.
+    </p>
+    <div class="hero__cta" data-reveal data-d="5">
+      <a href="#contacts" class="btn btn--gold magnetic" data-cursor="Book"><span>Book Now</span></a>
+      <a href="tel:+13104240142" class="btn btn--ghost magnetic" data-cursor="Call">
+        <svg viewBox="0 0 24 24" class="ico"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.24 11.4 11.4 0 0 0 3.6.58 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1 11.4 11.4 0 0 0 .58 3.6 1 1 0 0 1-.24 1z"/></svg>
+        <span>Call Us</span>
+      </a>
+    </div>
+  </div>
+
+  <!-- Animated rating badge -->
+  <div class="hero__badge" id="ratingBadge" data-reveal>
+    <div class="rating">
+      <div class="rating__stars" id="ratingStars" aria-hidden="true">
+        <svg viewBox="0 0 24 24" class="star"><path d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.9L12 17.8 5.8 21l1.2-6.9-5-4.9 6.9-1z"/></svg>
+        <svg viewBox="0 0 24 24" class="star"><path d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.9L12 17.8 5.8 21l1.2-6.9-5-4.9 6.9-1z"/></svg>
+        <svg viewBox="0 0 24 24" class="star"><path d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.9L12 17.8 5.8 21l1.2-6.9-5-4.9 6.9-1z"/></svg>
+        <svg viewBox="0 0 24 24" class="star"><path d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.9L12 17.8 5.8 21l1.2-6.9-5-4.9 6.9-1z"/></svg>
+        <svg viewBox="0 0 24 24" class="star"><path d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.9L12 17.8 5.8 21l1.2-6.9-5-4.9 6.9-1z"/></svg>
+      </div>
+      <div class="rating__score">
+        <span class="rating__num" id="ratingNum" data-target="4.9">0.0</span>
+        <span class="rating__of">/5</span>
+      </div>
+      <div class="rating__meta">
+        <span class="rating__count"><b id="ratingCount" data-target="1247">0</b> reviews</span>
+        <span class="rating__src">
+          <svg viewBox="0 0 24 24" class="ico-pin"><path d="M12 21s7-6.3 7-11a7 7 0 1 0-14 0c0 4.7 7 11 7 11z"/><circle cx="12" cy="10" r="2.6"/></svg>
+          on Google
+        </span>
+      </div>
+      <div class="rating__award">
+        <svg viewBox="0 0 24 24" class="ico-award"><circle cx="12" cy="9" r="6"/><path d="M9 14.5 7.5 22 12 19.5 16.5 22 15 14.5"/></svg>
+        <span>Nominee<br><b>2026</b></span>
+      </div>
+    </div>
+  </div>
+
+  <a href="#services" class="hero__scroll" data-cursor="Scroll" aria-label="Scroll down">
+    <span>Scroll</span>
+    <i></i>
+  </a>
+</section>
+
+<!-- ============ TRUST MARQUEE ============ -->
+<section class="marquee" aria-label="Brands we work with">
+  <div class="marquee__track">
+    <span>Mercedes-AMG</span><span class="dot">◆</span>
+    <span>BMW M</span><span class="dot">◆</span>
+    <span>Porsche</span><span class="dot">◆</span>
+    <span>Audi RS</span><span class="dot">◆</span>
+    <span>Ferrari</span><span class="dot">◆</span>
+    <span>Bentley</span><span class="dot">◆</span>
+    <span>Range Rover</span><span class="dot">◆</span>
+    <span>Tesla</span><span class="dot">◆</span>
+    <span>Mercedes-AMG</span><span class="dot">◆</span>
+    <span>BMW M</span><span class="dot">◆</span>
+    <span>Porsche</span><span class="dot">◆</span>
+    <span>Audi RS</span><span class="dot">◆</span>
+    <span>Ferrari</span><span class="dot">◆</span>
+    <span>Bentley</span><span class="dot">◆</span>
+    <span>Range Rover</span><span class="dot">◆</span>
+    <span>Tesla</span><span class="dot">◆</span>
+  </div>
+</section>
+
+<!-- ============ SERVICES ============ -->
+<section class="section services" id="services">
+  <div class="orb orb--gold" data-speed="0.10" style="width:420px;height:420px;top:4%;right:-120px"></div>
+  <div class="orb orb--cool" data-speed="-0.06" style="width:340px;height:340px;bottom:6%;left:-120px"></div>
+  <div class="container">
+    <header class="sec-head" data-reveal>
+      <span class="sec-tag">01 — Services</span>
+      <h2 class="sec-title">The full <em>premium</em> detailing lineup</h2>
+      <p class="sec-lead">Every step is handled by certified pros in a climate-controlled bay with proper lighting. No shortcuts, no compromises.</p>
+    </header>
+
+    <div class="services__grid">
+      <article class="scard scard--lg" data-reveal data-service="polish" data-cursor="Details" data-bg="../assets/img/polish-action.jpg">
+        <div class="scard__img"></div>
+        <div class="scard__body">
+          <span class="scard__num">/ 01</span>
+          <h3 class="scard__title">Paint Correction</h3>
+          <p class="scard__desc">Multi-stage machine polishing — we cut out swirls, holograms, and scratches to bring back deep color and a wet, mirror-like shine.</p>
+          <div class="scard__foot"><span class="scard__price">from $299</span><span class="scard__arrow">→</span></div>
+        </div>
+      </article>
+
+      <article class="scard" data-reveal data-d="1" data-service="ceramic" data-cursor="Details" data-bg="../assets/img/detail3.jpg">
+        <div class="scard__img"></div>
+        <div class="scard__body">
+          <span class="scard__num">/ 02</span>
+          <h3 class="scard__title">Ceramic Coating</h3>
+          <p class="scard__desc">A liquid-glass protective layer. Hydrophobic, self-cleaning, and gloss that lasts up&nbsp;to&nbsp;5&nbsp;years.</p>
+          <div class="scard__foot"><span class="scard__price">from $899</span><span class="scard__arrow">→</span></div>
+        </div>
+      </article>
+
+      <article class="scard" data-reveal data-d="2" data-service="wrap" data-cursor="Details" data-bg="../assets/img/detail4.jpg">
+        <div class="scard__img"></div>
+        <div class="scard__body">
+          <span class="scard__num">/ 03</span>
+          <h3 class="scard__title">Vinyl Wraps &amp; PPF</h3>
+          <p class="scard__desc">Premium color-change vinyl and paint protection film. Gloss, matte, satin, or color-shift — your call.</p>
+          <div class="scard__foot"><span class="scard__price">from $2,499</span><span class="scard__arrow">→</span></div>
+        </div>
+      </article>
+
+      <article class="scard" data-reveal data-d="1" data-service="cleaning" data-cursor="Details" data-bg="../assets/img/cockpit.jpg">
+        <div class="scard__img"></div>
+        <div class="scard__body">
+          <span class="scard__num">/ 04</span>
+          <h3 class="scard__title">Interior Detailing</h3>
+          <p class="scard__desc">Deep clean for leather, alcantara, and fabric, plus an ozone treatment. Your cabin, fresh&nbsp;off&nbsp;the&nbsp;lot.</p>
+          <div class="scard__foot"><span class="scard__price">from $189</span><span class="scard__arrow">→</span></div>
+        </div>
+      </article>
+
+      <article class="scard" data-reveal data-d="2" data-service="headlight" data-cursor="Details" data-bg="../assets/img/headlight2.jpg">
+        <div class="scard__img"></div>
+        <div class="scard__body">
+          <span class="scard__num">/ 05</span>
+          <h3 class="scard__title">Headlight Restoration</h3>
+          <p class="scard__desc">We kill the haze and yellowing, restore crystal clarity, and bring your beams back to life.</p>
+          <div class="scard__foot"><span class="scard__price">from $99</span><span class="scard__arrow">→</span></div>
+        </div>
+      </article>
+
+      <article class="scard scard--lg" data-reveal data-d="1" data-service="prep" data-cursor="Details" data-bg="../assets/img/detail5.jpg">
+        <div class="scard__img"></div>
+        <div class="scard__body">
+          <span class="scard__num">/ 06</span>
+          <h3 class="scard__title">Show &amp; Sale Prep</h3>
+          <p class="scard__desc">A full turnkey package: touchless wash, interior detail, paint correction, and protection. Sells faster, for more.</p>
+          <div class="scard__foot"><span class="scard__price">from $249</span><span class="scard__arrow">→</span></div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ STUDIO GALLERY ============ -->
+<section class="section studio" id="studio">
+  <div class="container">
+    <header class="sec-head" data-reveal>
+      <span class="sec-tag">— Studio</span>
+      <h2 class="sec-title">Inside <em>the studio</em></h2>
+      <p class="sec-lead">A climate-controlled bay, proper lighting, and supercars in the works. The kind of space you trust your car to.</p>
+    </header>
+    <div class="gallery">
+      <figure class="gitem gitem--xl" data-reveal data-bg="../assets/img/studio-bugatti.jpg"><span class="gitem__img"></span><span class="gitem__sheen"></span><figcaption>Bugatti Chiron<span>Premium detailing</span></figcaption></figure>
+      <figure class="gitem gitem--wide" data-reveal data-d="1" data-bg="../assets/img/studio-topdown.jpg"><span class="gitem__img"></span><span class="gitem__sheen"></span><figcaption>The shop floor<span>Supercars in the works</span></figcaption></figure>
+      <figure class="gitem" data-reveal data-d="2" data-bg="../assets/img/studio-lambo.jpg"><span class="gitem__img"></span><span class="gitem__sheen"></span><figcaption>Lamborghini<span>Correction · protection</span></figcaption></figure>
+      <figure class="gitem" data-reveal data-d="1" data-bg="../assets/img/lounge.jpg"><span class="gitem__img"></span><span class="gitem__sheen"></span><figcaption>Client lounge<span>While your car's in</span></figcaption></figure>
+      <figure class="gitem gitem--wide" data-reveal data-d="2" data-bg="../assets/img/detailer-portrait.jpg"><span class="gitem__img"></span><span class="gitem__sheen"></span><figcaption>Our detailers<span>Hand-finished</span></figcaption></figure>
+      <figure class="gitem gitem--wide" data-reveal data-d="1" data-bg="../assets/img/tools-cart.jpg"><span class="gitem__img"></span><span class="gitem__sheen"></span><figcaption>The tools<span>Pro-grade</span></figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CALCULATOR ============ -->
+<section class="section calc" id="calculator">
+  <div class="orb orb--gold" data-speed="0.08" style="width:380px;height:380px;top:20%;left:-140px"></div>
+  <div class="container">
+    <header class="sec-head" data-reveal>
+      <span class="sec-tag">02 — Instant Quote</span>
+      <h2 class="sec-title">Get your quote <em>in a minute</em></h2>
+      <p class="sec-lead">Pick your vehicle type and the services you want — get a ballpark price instantly. Your final quote is confirmed at a free walkthrough.</p>
+    </header>
+
+    <div class="calc__panel" data-reveal>
+      <div class="calc__form">
+        <div class="calc__group">
+          <label class="calc__label">Vehicle Type</label>
+          <div class="seg" id="calcClass" role="group">
+            <button class="seg__btn is-active" data-mult="1" data-cursor="Select">Sedan</button>
+            <button class="seg__btn" data-mult="1.15" data-cursor="Select">Crossover</button>
+            <button class="seg__btn" data-mult="1.3" data-cursor="Select">SUV / Truck</button>
+            <button class="seg__btn" data-mult="1.1" data-cursor="Select">Sports Car</button>
+          </div>
+        </div>
+
+        <div class="calc__group">
+          <label class="calc__label">Choose Your Services</label>
+          <div class="chips" id="calcServices">
+            <button class="chip" data-price="299" data-cursor="Add"><span>Paint Correction</span><i>$299</i></button>
+            <button class="chip" data-price="899" data-cursor="Add"><span>Ceramic · 1 layer</span><i>$899</i></button>
+            <button class="chip" data-price="1299" data-cursor="Add"><span>Ceramic · 2 layers</span><i>$1,299</i></button>
+            <button class="chip" data-price="2499" data-cursor="Add"><span>Vinyl Wrap</span><i>$2,499</i></button>
+            <button class="chip" data-price="189" data-cursor="Add"><span>Interior Detail</span><i>$189</i></button>
+            <button class="chip" data-price="99" data-cursor="Add"><span>Headlight Restoration</span><i>$99</i></button>
+            <button class="chip" data-price="149" data-cursor="Add"><span>Glass “Rain Repellent”</span><i>$149</i></button>
+          </div>
+        </div>
+      </div>
+
+      <aside class="calc__result">
+        <span class="calc__result-label">Estimated</span>
+        <div class="calc__total"><span class="calc__cur">$</span><span id="calcTotal">0</span></div>
+        <ul class="calc__list" id="calcList"><li class="calc__empty">Pick services on the left</li></ul>
+        <div class="calc__note">Final price confirmed after a quick walkthrough</div>
+        <a href="#contacts" class="btn btn--gold btn--block magnetic" data-cursor="Book"><span>Book this package</span></a>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- ============ BEFORE / AFTER ============ -->
+<section class="section works" id="works">
+  <div class="container">
+    <header class="sec-head" data-reveal>
+      <span class="sec-tag">03 — Our Work</span>
+      <h2 class="sec-title">Before &amp; after. <em>No filters.</em></h2>
+      <p class="sec-lead">Drag the slider and see for yourself. Real work from our shop — no editing, no retouching.</p>
+    </header>
+
+    <div class="works__tabs" id="worksTabs" data-reveal>
+      <button class="works__tab is-active" data-tab="body" data-cursor="View">Paint Correction</button>
+      <button class="works__tab" data-tab="head" data-cursor="View">Headlight Restoration</button>
+      <button class="works__tab" data-tab="cabin" data-cursor="View">Interior Detail</button>
+    </div>
+
+    <div class="ba-wrap" data-imggroup data-reveal>
+      <!-- BODY -->
+      <div class="ba is-active" data-panel="body">
+        <div class="ba__view" data-ba>
+          <img data-src="assets/img/polish-after.jpg?v=3" alt="Paint after correction — mirror gloss" loading="lazy" decoding="async" class="ba__img ba__img--after" />
+          <div class="ba__before"><img data-src="assets/img/polish-before.jpg?v=3" alt="Paint before correction — swirls and holograms" loading="lazy" decoding="async" class="ba__img ba__img--before" /></div>
+          <span class="ba__tag ba__tag--before">Before</span>
+          <span class="ba__tag ba__tag--after">After</span>
+          <div class="ba__handle"><i></i></div>
+        </div>
+      </div>
+      <!-- HEADLIGHT -->
+      <div class="ba" data-panel="head">
+        <div class="ba__view" data-ba>
+          <img data-src="assets/img/headlight-after.jpg?v=2" alt="Headlights after restoration — crystal clear" loading="lazy" decoding="async" class="ba__img ba__img--after" />
+          <div class="ba__before"><img data-src="assets/img/headlight-before.jpg?v=2" alt="Headlights before restoration — hazy and yellowed" loading="lazy" decoding="async" class="ba__img ba__img--before" /></div>
+          <span class="ba__tag ba__tag--before">Before</span>
+          <span class="ba__tag ba__tag--after">After</span>
+          <div class="ba__handle"><i></i></div>
+        </div>
+      </div>
+      <!-- CABIN -->
+      <div class="ba" data-panel="cabin">
+        <div class="ba__view" data-ba>
+          <img data-src="assets/img/cabin-after.jpg?v=1" alt="Interior after detailing — clean, fresh leather" loading="lazy" decoding="async" class="ba__img ba__img--after" />
+          <div class="ba__before"><img data-src="assets/img/cabin-before.jpg?v=1" alt="Interior before detailing — stains and grime" loading="lazy" decoding="async" class="ba__img ba__img--before" /></div>
+          <span class="ba__tag ba__tag--before">Before</span>
+          <span class="ba__tag ba__tag--after">After</span>
+          <div class="ba__handle"><i></i></div>
+        </div>
+      </div>
+
+      <p class="ba__hint"><svg viewBox="0 0 24 24" class="ico"><path d="M8 9l-4 3 4 3M16 9l4 3-4 3"/></svg> Drag to compare</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FILM COLOR CONFIGURATOR ============ -->
+<section class="section wrap" id="wrap">
+  <div class="container">
+    <header class="sec-head" data-reveal>
+      <span class="sec-tag">04 — Color Lab</span>
+      <h2 class="sec-title">See your ride <em>in a new color</em></h2>
+      <p class="sec-lead">Same car, different wraps. Tap a color and watch it transform — gloss, matte, or color-shift.</p>
+    </header>
+
+    <div class="config" data-reveal>
+      <div class="config__stage">
+        <div class="config__glow" id="carGlow"></div>
+        <div class="config__floor"></div>
+        <div class="carphoto" id="carPhoto">
+          <img class="carphoto__img is-on" id="carImgA" loading="lazy" decoding="async" src="assets/img/wrap-1.jpg?v=2" alt="Car in the selected wrap color" />
+          <img class="carphoto__img" id="carImgB" src="" alt="" aria-hidden="true" />
+        </div>
+        <span class="config__badge" id="carFinishBadge">Gloss</span>
+      </div>
+
+      <div class="config__panel">
+        <div class="config__readout">
+          <span class="config__rlabel">Selected color</span>
+          <h3 class="config__cname" id="colorName">Pearl White</h3>
+          <div class="config__meta">
+            <span class="config__finish" id="colorFinish">Gloss</span>
+            <span class="config__warranty">Wrap warranty — up to 7 years</span>
+          </div>
+        </div>
+
+        <div class="config__swatches" id="swatches" role="listbox" aria-label="Choose a wrap color">
+          <button class="sw is-active" data-cursor="Color" data-img="assets/img/wrap-1.jpg?v=2" data-name="Pearl White" data-finish="Gloss" data-glow="#e8e8e6" style="--c:#eeeeee"></button>
+          <button class="sw" data-cursor="Color" data-img="assets/img/wrap-2.jpg?v=2" data-name="Midnight Black" data-finish="Gloss" data-glow="#26262c" style="--c:#15161a"></button>
+          <button class="sw" data-cursor="Color" data-img="assets/img/wrap-3.jpg?v=2" data-name="Deep Blue" data-finish="Gloss" data-glow="#1f4fb0" style="--c:#1f4fb0"></button>
+          <button class="sw sw--matte" data-cursor="Color" data-img="assets/img/wrap-4.jpg?v=2" data-name="Matte Blue" data-finish="Matte" data-glow="#2f4a6b" style="--c:#2f4a6b"></button>
+          <button class="sw" data-cursor="Color" data-img="assets/img/wrap-5.jpg?v=2" data-name="Racing Red" data-finish="Satin" data-glow="#b5302c" style="--c:#b5302c"></button>
+          <button class="sw sw--matte" data-cursor="Color" data-img="assets/img/wrap-6.jpg?v=2" data-name="Matte Graphite" data-finish="Matte" data-glow="#3a3d42" style="--c:#3a3d42"></button>
+          <button class="sw" data-cursor="Color" data-img="assets/img/wrap-7.jpg?v=2" data-name="Nardo Gray" data-finish="Satin" data-glow="#8b8f8a" style="--c:#8b8f8a"></button>
+          <button class="sw sw--cham" data-cursor="Color" data-img="assets/img/wrap-8.jpg?v=2" data-name="Aurora Color-Shift" data-finish="Color-Shift" data-glow="#3b6db0" style="--c:linear-gradient(135deg,#2f9d6b,#3b6db0,#6b3aa0)"></button>
+        </div>
+
+        <a href="#contacts" class="btn btn--gold btn--block magnetic" data-cursor="Book"><span>Book a wrap</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PROCESS ============ -->
+<section class="section process">
+  <div class="container">
+    <header class="sec-head" data-reveal>
+      <span class="sec-tag">05 — Process</span>
+      <h2 class="sec-title">How we work</h2>
+      <p class="sec-lead">A transparent process with photo updates at every stage. You always know exactly what's happening with your car.</p>
+    </header>
+    <ol class="steps">
+      <li class="step" data-reveal data-d="0"><span class="step__n">01</span><h3>Inspection</h3><p>Paint-depth readings, inspection under detailing lights, and a full assessment.</p></li>
+      <li class="step" data-reveal data-d="1"><span class="step__n">02</span><h3>Prep</h3><p>Touchless wash, decontamination, and taping off sensitive areas.</p></li>
+      <li class="step" data-reveal data-d="2"><span class="step__n">03</span><h3>The Work</h3><p>Correction, coating, or wrap — done strictly by the book.</p></li>
+      <li class="step" data-reveal data-d="3"><span class="step__n">04</span><h3>Quality Check</h3><p>We re-inspect under light and dial in every last detail.</p></li>
+      <li class="step" data-reveal data-d="4"><span class="step__n">05</span><h3>Handoff &amp; Warranty</h3><p>Photo report, care tips, and your written warranty.</p></li>
+    </ol>
+  </div>
+</section>
+
+<!-- ============ STATS ============ -->
+<section class="section stats" data-secbg="../assets/img/studio-topdown.jpg">
+  <div class="container">
+    <div class="stats__grid">
+      <div class="stat" data-reveal><b class="stat__n" data-target="12">0</b><span>years in business</span></div>
+      <div class="stat" data-reveal data-d="1"><b class="stat__n" data-target="8400" data-plus="+">0</b><span>cars detailed</span></div>
+      <div class="stat" data-reveal data-d="2"><b class="stat__n" data-target="4.9" data-dec="1">0</b><span>average rating</span></div>
+      <div class="stat" data-reveal data-d="3"><b class="stat__n" data-target="24">0</b><span>months warranty</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ REVIEWS ============ -->
+<section class="section reviews" id="reviews">
+  <div class="orb orb--cool" data-speed="0.09" style="width:440px;height:440px;top:0;right:-160px"></div>
+  <div class="container">
+    <header class="sec-head" data-reveal>
+      <span class="sec-tag">06 — Reviews</span>
+      <h2 class="sec-title">Trusted by <em>the pickiest owners</em></h2>
+      <p class="sec-lead">4.9 out of 5 from 1,247 Google reviews. Here are just a few.</p>
+    </header>
+    <div class="reviews__grid">
+      <figure class="rev" data-reveal>
+        <div class="rev__stars">★★★★★</div>
+        <blockquote>Got ceramic done on my Panamera. Thing shines like it just rolled off the lot and water beads right off. They sent updates at every step — next level.</blockquote>
+        <figcaption><b>Marcus T.</b><span>Porsche Panamera · Google</span></figcaption>
+      </figure>
+      <figure class="rev" data-reveal data-d="1">
+        <div class="rev__stars">★★★★★</div>
+        <blockquote>Wrapped my car in matte graphite. The work is flawless — no visible seams, edges are perfect. This is the shop you keep coming back to.</blockquote>
+        <figcaption><b>Ashley R.</b><span>BMW M3 · Google</span></figcaption>
+      </figure>
+      <figure class="rev" data-reveal data-d="2">
+        <div class="rev__stars">★★★★★</div>
+        <blockquote>Paint correction knocked out all the fine scratches and the color's way deeper now. Threw in an interior detail too — smells brand new on a 10-year-old car.</blockquote>
+        <figcaption><b>Derek W.</b><span>Mercedes-AMG GT · Google</span></figcaption>
+      </figure>
+      <figure class="rev" data-reveal data-d="1">
+        <div class="rev__stars">★★★★★</div>
+        <blockquote>Premium service start to finish: coffee, a clear quote, warranty in writing. Worth every penny for this kind of quality. Highly recommend.</blockquote>
+        <figcaption><b>Jordan M.</b><span>Audi RS6 · Google</span></figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ============ GUARANTEE BANNER ============ -->
+<section class="section guarantee" data-secbg="../assets/img/showroom.jpg">
+  <div class="guarantee__scrim"></div>
+  <div class="container guarantee__inner" data-reveal>
+    <span class="sec-tag">Guarantee</span>
+    <h2 class="guarantee__title">We keep that shine longer than the&nbsp;warranty&nbsp;promises</h2>
+    <p>Not happy within the warranty period? We'll redo it — free. We put our reputation on the line for every car that rolls through.</p>
+    <a href="#contacts" class="btn btn--gold magnetic" data-cursor="Book"><span>Book a free walkthrough</span></a>
+  </div>
+</section>
+
+<!-- ============ FAQ ============ -->
+<section class="section faq" id="faq">
+  <div class="container container--narrow">
+    <header class="sec-head" data-reveal>
+      <span class="sec-tag">07 — FAQ</span>
+      <h2 class="sec-title">Common questions</h2>
+    </header>
+    <div class="acc" id="acc">
+      <div class="acc__item" data-reveal>
+        <button class="acc__q" data-cursor="Open"><span>How long does paint correction take?</span><i class="acc__ico"></i></button>
+        <div class="acc__a"><p>A light correction runs from 4 hours; a full multi-stage job takes 1–2 days. We'll give you an exact timeline after inspecting your paint.</p></div>
+      </div>
+      <div class="acc__item" data-reveal>
+        <button class="acc__q" data-cursor="Open"><span>What's the warranty on ceramic and wraps?</span><i class="acc__ico"></i></button>
+        <div class="acc__a"><p>Up to 24 months on ceramic coatings depending on the package, and up to 7 years on protective film from the manufacturer. It's all in writing.</p></div>
+      </div>
+      <div class="acc__item" data-reveal>
+        <button class="acc__q" data-cursor="Open"><span>Can you wrap just part of the car?</span><i class="acc__ico"></i></button>
+        <div class="acc__a"><p>Absolutely. We do full wraps or just the high-risk zones — hood, bumper, mirrors, and headlights. We'll find the right option for your budget.</p></div>
+      </div>
+      <div class="acc__item" data-reveal>
+        <button class="acc__q" data-cursor="Open"><span>Do I need to wash my car before dropping it off?</span><i class="acc__ico"></i></button>
+        <div class="acc__a"><p>Nope — touchless wash and prep are included. Just bring it as-is.</p></div>
+      </div>
+      <div class="acc__item" data-reveal>
+        <button class="acc__q" data-cursor="Open"><span>Do you work on brand-new cars?</span><i class="acc__ico"></i></button>
+        <div class="acc__a"><p>Yes, and we recommend it. Protecting fresh paint with film or ceramic right after purchase is the best investment you can make in your car.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CONTACTS ============ -->
+<section class="section contacts" id="contacts">
+  <div class="orb orb--gold" data-speed="0.07" style="width:400px;height:400px;bottom:8%;right:-130px"></div>
+  <div class="container">
+    <div class="contacts__grid">
+      <div class="contacts__info" data-reveal>
+        <span class="sec-tag">08 — Contact</span>
+        <h2 class="sec-title">Book with <em>DETAILING</em></h2>
+        <p class="sec-lead">Free inspection and quote. We'll get back to you within 15 minutes.</p>
+
+        <ul class="contacts__list">
+          <li>
+            <svg viewBox="0 0 24 24" class="ico"><path d="M12 21s7-6.3 7-11a7 7 0 1 0-14 0c0 4.7 7 11 7 11z"/><circle cx="12" cy="10" r="2.6"/></svg>
+            <div><b>Address</b>8420 Melrose Ave, Los Angeles, CA 90069</div>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" class="ico"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.24 11.4 11.4 0 0 0 3.6.58 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1 11.4 11.4 0 0 0 .58 3.6 1 1 0 0 1-.24 1z"/></svg>
+            <div><b>Phone</b><a href="tel:+13104240142">(310) 424-0142</a></div>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" class="ico"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+            <div><b>Hours</b>Mon–Sat · 8AM – 7PM</div>
+          </li>
+        </ul>
+
+        <div class="contacts__map" aria-hidden="true">
+          <div class="map-grid"></div>
+          <div class="map-road map-road--1"></div>
+          <div class="map-road map-road--2"></div>
+          <div class="map-pin"><span></span></div>
+          <span class="map-label">Melrose Ave</span>
+        </div>
+      </div>
+
+      <form class="contacts__form" data-reveal data-d="1" id="bookForm" novalidate>
+        <div class="field">
+          <input type="text" id="fName" name="name" placeholder=" " required />
+          <label for="fName">Your name</label>
+        </div>
+        <div class="field">
+          <input type="tel" id="fPhone" name="phone" placeholder=" " required />
+          <label for="fPhone">Phone</label>
+        </div>
+        <div class="field">
+          <input type="text" id="fCar" name="car" placeholder=" " />
+          <label for="fCar">Vehicle (make &amp; model)</label>
+        </div>
+        <div class="field">
+          <select id="fService" name="service">
+            <option value="Paint Correction">Paint Correction</option>
+            <option value="Ceramic Coating">Ceramic Coating</option>
+            <option value="Vinyl Wrap">Vinyl Wrap / PPF</option>
+            <option value="Interior Detail">Interior Detailing</option>
+            <option value="Headlight Restoration">Headlight Restoration</option>
+            <option value="Full Package">Full Package</option>
+          </select>
+          <label for="fService" class="field__label--static">Service</label>
+        </div>
+        <button type="submit" class="btn btn--gold btn--block magnetic" data-cursor="Send"><span>Book Now</span></button>
+        <p class="contacts__policy">By submitting, you agree to our privacy policy.</p>
+        <p class="contacts__success" id="formSuccess" hidden>Thanks! We'll get back to you within 15 minutes.</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer">
+  <div class="container footer__inner">
+    <div class="footer__brand">
+      <a href="#hero" class="brand"><span class="brand__diamond"></span><span class="brand__name">DETAI<span>LING</span></span></a>
+      <p>Premium auto detailing studio in Los Angeles. Paint correction, ceramic coating, wraps, and interior detailing.</p>
+    </div>
+    <nav class="footer__nav" aria-label="Footer">
+      <a href="#services">Services</a>
+      <a href="#calculator">Pricing</a>
+      <a href="#works">Our Work</a>
+      <a href="#wrap">Color Lab</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#contacts">Contact</a>
+    </nav>
+    <div class="footer__contact">
+      <a href="tel:+13104240142" class="footer__phone">(310) 424-0142</a>
+      <p>8420 Melrose Ave, Los Angeles, CA 90069</p>
+      <p>Mon–Sat · 8AM – 7PM</p>
+    </div>
+  </div>
+  <div class="container footer__bottom">
+    <span>© 2026 DETAILING. All rights reserved.</span>
+    <span class="footer__award">◆ 2026 Detailing Awards Nominee</span>
+  </div>
+</footer>
+
+<!-- ============ SERVICE MODAL ============ -->
+<div class="modal" id="serviceModal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+  <div class="modal__backdrop" data-close></div>
+  <div class="modal__panel">
+    <button class="modal__close" data-close aria-label="Close" data-cursor="Close">
+      <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 6l12 12M18 6L6 18"/></svg>
+    </button>
+    <div class="modal__media"><img id="modalImg" src="" alt="" /></div>
+    <div class="modal__body">
+      <span class="modal__tag" id="modalTag">Service</span>
+      <h3 class="modal__title" id="modalTitle"></h3>
+      <p class="modal__lead" id="modalLead"></p>
+      <ul class="modal__list" id="modalList"></ul>
+      <div class="modal__foot">
+        <span class="modal__price" id="modalPrice"></span>
+        <a href="#contacts" class="btn btn--gold magnetic" data-cursor="Book" data-close><span>Book Now</span></a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="js/main-us.js?v=2"></script>
+</body>
+</html>
